@@ -1,0 +1,2 @@
+observed_difference,ci_low,ci_high,two_sided_bootstrap_p,bootstrap_replicates,seed
+-0.0022876251,-0.0150069695,0.0088604228,0.7302,10000,123456789

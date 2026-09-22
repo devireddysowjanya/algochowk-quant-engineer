@@ -1,0 +1,21 @@
+# Submission Checklist
+
+- [x] GitHub repository structure
+- [x] Research specification
+- [x] Data source and coverage documentation
+- [x] Data validation
+- [x] Event detection
+- [x] Forward returns
+- [x] Baseline comparison
+- [x] N / mean / median / win rate / volatility
+- [x] Bootstrap evidence
+- [x] Robustness grid
+- [x] Data-snooping / multiple-testing discussion
+- [x] Development / OOS split
+- [x] Falsification / limitations
+- [x] Event-driven backtest with costs/slippage proxy
+- [x] Cumulative return and maximum drawdown
+- [x] Research Note <= 2 pages
+- [x] AI Usage Note <= 1 page
+- [x] 2–3 minute video script
+- [ ] Before final GitHub submission, run `python data/download_data.py` and retain raw data if redistribution/licensing permits.

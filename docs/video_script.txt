@@ -1,0 +1,33 @@
+# 2–3 Minute Video Script
+
+## 0:00–0:25 — Question
+“I investigated the hypothesis that after a significant one-day fall in NIFTY 50, the market tends to recover over the next few trading days.”
+
+“I made the hypothesis reproducible by defining a significant fall as a close-to-close decline of at least 2%, with the primary outcome being the 5-trading-day return after entering at the next day's open.”
+
+## 0:25–0:55 — Data and design
+“I used daily NIFTY 50 OHLC data from 2015 through 2025. I validated duplicate dates, ordering, missing values and OHLC relationships.”
+
+“To avoid look-ahead bias, the signal is only acted on at the next day's open. I also prevented closely occurring events from overlapping the primary 5-day holding window.”
+
+## 0:55–1:30 — Evidence
+“There were 46 non-overlapping events under the primary rule. The mean 5-day event return was about 0.01%, while the normal-market 5-day baseline was about 0.24%.”
+
+“So the event effect was actually about -0.23 percentage points relative to baseline.”
+
+“The median event return was positive and the win rate was 54%, but those numbers are not enough because normal NIFTY forward returns are also frequently positive.”
+
+## 1:30–1:55 — Statistics and robustness
+“I used a bootstrap confidence interval for the difference between event and baseline means. The 95% interval ran from roughly -1.50 to +0.89 percentage points, so zero remains well inside the interval.”
+
+“I then varied the threshold and holding period. Some larger thresholds produced stronger historical results, but I did not select those as the strategy because doing so after seeing the results would be post-hoc optimization.”
+
+## 1:55–2:20 — OOS and backtest
+“For out-of-sample validation, I kept 2021 through 2025 unseen during development. The OOS mean was positive, about 0.94%, but only 16 events were available and the uncertainty interval still included zero.”
+
+“The simple 20-basis-point-friction backtest lost about 12% cumulatively and experienced a maximum drawdown of about 34%.”
+
+## 2:20–2:45 — Conclusion
+“My conclusion is deliberately cautious. Under the pre-specified -2% and 5-day experiment, there is not enough evidence to claim a robust abnormal recovery effect.”
+
+“The important result was not finding the best historical backtest. It was testing whether the evidence deserved to be believed, challenging it with a baseline, robustness checks, out-of-sample validation and trading frictions.”

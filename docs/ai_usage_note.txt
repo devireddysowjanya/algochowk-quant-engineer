@@ -1,0 +1,36 @@
+AI Usage Note — AlgoChowk Quant Engineer Assignment
+
+Tools used
+- ChatGPT for research-design review, statistical-method discussion, code review, edge-case identification, documentation and presentation drafting.
+
+How AI was used
+- Converted the assignment's broad hypothesis into a reproducible event-study specification.
+- Reviewed potential look-ahead bias and entry-timing choices.
+- Suggested baseline comparisons, bootstrap confidence intervals, overlap handling, robustness checks and chronological OOS validation.
+- Helped structure the Python research engine and submission documents.
+
+My own decisions
+- Primary event threshold: -2%.
+- Primary holding period: 5 trading days.
+- Entry: next trading-day open.
+- Closely occurring events: suppress new signals until the 5-day holding window ends.
+- Development/OOS split: 2015–2020 / 2021–2025.
+- Friction proxy: 20 bps round trip.
+- The primary specification was frozen before interpreting the final results.
+
+Suggestions changed or challenged
+- I did not optimize the threshold to maximize historical returns.
+- I did not select the strongest robustness cell as the final strategy.
+- I treated the backtest as an extension of the research rather than the objective.
+- I retained a negative conclusion where the evidence did not support the original hypothesis.
+
+Incorrect / risky suggestions identified
+- A backtest that enters at the event-day close would introduce look-ahead because the event is defined using that day's close.
+- Treating every closely spaced event as independent would understate dependence.
+- Choosing the best threshold after inspecting all historical results would create post-hoc selection/data-snooping risk.
+
+What I learned
+- Event studies need a precise signal timestamp, not just a price condition.
+- A positive average return is not evidence of an edge unless it is compared with an appropriate baseline.
+- Robustness and OOS validation matter more than a high in-sample return.
+- Statistical significance and economic significance are different questions.
